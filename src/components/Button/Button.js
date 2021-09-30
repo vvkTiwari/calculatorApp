@@ -6,7 +6,8 @@ const Button = (props) => (
         className={`Button ${props.btnClass}`}
         onClick={props.onClick}
         data-size={props.size}
-        data-value={props.value}>
+        data-value={props.value}
+        style={{width:`${props.width}%`}}>
         {props.label}
     </div>
 )

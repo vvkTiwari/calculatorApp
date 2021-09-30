@@ -1,12 +1,14 @@
 import React, {useState} from 'react';
-import Button from '../Button/Button';
-import Keypad from '../Keypad/Keypad';
 import './Calculator.css';
 import Display from '../Display/Display';
+import Keypad from '../Keypad/Keypad';
+import SimpleKeypad from '../Keypad/SimpleKeypad';
+import ScientificKeypad from '../Keypad/ScientificKeypad';
 
 const Calculator = () => {
 
     const [data, setData] = useState('');
+    const [expand, setExpand] = useState(false);
 
     const calculate = () => {
         try {
@@ -31,34 +33,16 @@ const Calculator = () => {
         }
     }
 
+    const handleExpandCalc = () => {
+        setExpand(!expand);
+    }
+
     return(
         <div className="Calculator">
             <Display data={data}/>
-            <Keypad>
-                <Button onClick={handleClick} btnClass="LightBlue" label="C" value="clear" />
-                <Button onClick={handleClick} btnClass="LightBlue" label="D" value="del" />
-                <Button onClick={handleClick} btnClass="LightBlue" label="expand" value="expand" />
-                <Button onClick={handleClick} btnClass="DarkBlue" label="+/-" value="null" />
-
-                <Button onClick={handleClick} label="7" value="7" />
-                <Button onClick={handleClick} label="8" value="8" />
-                <Button onClick={handleClick} label="9" value="9" />
-                <Button onClick={handleClick} btnClass="DarkBlue" label="/" value="/" />
-
-                <Button onClick={handleClick} label="4" value="4" />
-                <Button onClick={handleClick} label="5" value="5" />
-                <Button onClick={handleClick} label="6" value="6" />
-                <Button onClick={handleClick} btnClass="DarkBlue" label="x" value="*" />
-
-                <Button onClick={handleClick} label="1" value="1" />
-                <Button onClick={handleClick} label="2" value="2" />
-                <Button onClick={handleClick} label="3" value="3" />
-                <Button onClick={handleClick} btnClass="DarkBlue" label="-" value="-" />
-
-                <Button onClick={handleClick} label="." value="." />
-                <Button onClick={handleClick} label="=" value="equal" />
-                <Button onClick={handleClick} label="0" value="0" />
-                <Button onClick={handleClick} btnClass="DarkBlue" label="+" value="+" />
+            <Keypad style={{display:'flex', width: '100%'}}>
+                <ScientificKeypad handleClick={null} expand={expand} />
+                <SimpleKeypad handleClick={handleClick} onExpand={handleExpandCalc} />
             </Keypad>
         </div>
     );

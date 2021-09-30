@@ -6,7 +6,7 @@ body {
 }
 
 .Calculator {
-    width: 400px;
+    max-width: 1000px;
     height: 300px;
     position: relative;
     margin: 25px;
