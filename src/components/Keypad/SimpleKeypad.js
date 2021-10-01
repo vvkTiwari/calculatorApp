@@ -1,6 +1,8 @@
 import React from 'react';
 import Button from '../Button/Button';
 
+import { keyCodeValueMap } from '../../common/common';
+
 const SimpleKeypad = (props) => {
 
     return(
