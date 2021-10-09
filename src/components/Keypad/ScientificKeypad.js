@@ -28,9 +28,9 @@ const ScientificKeypad = (props) => {
                 <Button onClick={props.handleClick} btnClass="Gray"  width="16.66" label="ln" value="*" />
 
                 <Button onClick={props.handleClick} btnClass="Gray"  width="16.66" label="Rand" value="1" />
-                <Button onClick={props.handleClick} btnClass="Gray"  width="16.66" label="tan" value="2" />
-                <Button onClick={props.handleClick} btnClass="Gray"  width="16.66" label="sin" value="math.sin" />
-                <Button onClick={props.handleClick} btnClass="Gray"  width="16.66" label="cos" value="-" />
+                <Button onClick={props.handleClick} btnClass="Gray"  width="16.66" label="tan" value="tan" />
+                <Button onClick={props.handleClick} btnClass="Gray"  width="16.66" label="sin" value="sin" />
+                <Button onClick={props.handleClick} btnClass="Gray"  width="16.66" label="cos" value="cos" />
                 <Button onClick={props.handleClick} btnClass="Gray"  width="16.66" label="Yx" value="null" />
                 <Button onClick={props.handleClick} btnClass="Gray"  width="16.66" label="10x" value="null" />
 

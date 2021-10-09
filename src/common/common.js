@@ -16,3 +16,5 @@ export const keyCodeValueMap = {
     111: '/',
     187: '=' 
 }
+
+export const operators = ["+", "-","/","*","="];
