@@ -6,8 +6,8 @@ const ScientificKeypad = (props) => {
 
     return(
             <div style={{display:shown, flexWrap:'wrap', width:'600px'}}>
-                <Button onClick={props.handleClick} btnClass="Gray"  width="16.66" label="(" value="clear" />
-                <Button onClick={props.handleClick} btnClass="Gray"  width="16.66" label=")" value="del" />
+                <Button onClick={props.handleClick} btnClass="Gray"  width="16.66" label="(" value="(" />
+                <Button onClick={props.handleClick} btnClass="Gray"  width="16.66" label=")" value=")" />
                 <Button onClick={props.handleClick} btnClass="Gray"  width="16.66" label="MC" value="expand" />
                 <Button onClick={props.handleClick} btnClass="Gray"  width="16.66" label="M+" value="null" />
                 <Button onClick={props.handleClick} btnClass="Gray"  width="16.66" label="M-" value="null" />
@@ -29,7 +29,7 @@ const ScientificKeypad = (props) => {
 
                 <Button onClick={props.handleClick} btnClass="Gray"  width="16.66" label="Rand" value="1" />
                 <Button onClick={props.handleClick} btnClass="Gray"  width="16.66" label="tan" value="2" />
-                <Button onClick={props.handleClick} btnClass="Gray"  width="16.66" label="sin" value="3" />
+                <Button onClick={props.handleClick} btnClass="Gray"  width="16.66" label="sin" value="math.sin" />
                 <Button onClick={props.handleClick} btnClass="Gray"  width="16.66" label="cos" value="-" />
                 <Button onClick={props.handleClick} btnClass="Gray"  width="16.66" label="Yx" value="null" />
                 <Button onClick={props.handleClick} btnClass="Gray"  width="16.66" label="10x" value="null" />
